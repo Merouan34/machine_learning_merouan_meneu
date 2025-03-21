@@ -1,0 +1,35 @@
+# Environnements virtuels
+venv/
+env/
+pyenv.cfg
+Lib/
+Include/
+Scripts/
+share/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Config VSCode
+.vscode/
+
+# Data
+data/
+
+# Modèles ou fichiers lourds
+*.joblib
+*.h5
+*.pkl
+
+# Cache pip
+pip-wheel-metadata/
