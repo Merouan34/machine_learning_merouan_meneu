@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction Covid - Modèle Random Forest</title>
+</head>
+<body>
+    <h1>Prédire le nombre de décès lié au Covid</h1>
+    <form method="POST" action="/predict">
+        <label for="cases">Nombre de cas :</label>
+        <input type="number" name="cases" required><br><br>
+
+        <label for="vaccinated_percent">Taux de vaccination (%) :</label>
+        <input type="number" step="0.1" name="vaccinated_percent" required><br><br>
+
+        <label for="total_vaccinations">Total des vaccinations :</label>
+        <input type="number" name="total_vaccinations" required><br><br>
+
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
